@@ -16,11 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/koleksi-buku', function () {
-//       return view('koleksi-buku');
-//  });
-// Route::get('/koleksi-buku', [KoleksiBukuController::class]);
-// Route::get('/tambah-buku', [MenuController::class, 'admin']);
+// Route::prefix('home')->group(function () {
+//     Route::get('/koleksi-buku', [KoleksiBukuController::class, 'home']);
+//     Route::resource('/koleksi-buku', KoleksiBukuController::class);
+// });
 
-Route::resource('/tambah-buku', TambahBukuController::class);
-Route::resource('/koleksi-buku', KoleksiBukuController::class);
+
+  Route::get('/', function () {
+      return view('koleksi-buku');
+ 
+   });
+// // Route::get('/koleksi-buku', [KoleksiBukuController::class]);
+// // Route::get('/tambah-buku', [MenuController::class, 'admin']);
+
+ Route::resource('/tambah-buku', TambahBukuController::class);
+ Route::resource('/koleksi-buku', KoleksiBukuController::class);

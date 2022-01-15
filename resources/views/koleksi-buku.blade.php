@@ -46,7 +46,7 @@
                       <th> Tahun Terbit </th>
                       <th> Aksi </th>
                   </tr>
-                  @foreach ($tambahbuku as $b)
+                  @foreach($tambahbuku as $b)
                   <tr>
                     <td>{{$b->judul_buku}}</td>
                     <td>{{$b->genre}}</td>
